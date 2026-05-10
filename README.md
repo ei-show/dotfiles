@@ -21,3 +21,7 @@ cd $(ghq root)/ei-show/dotfiles
 chmod +x install.sh
 ./install.sh
 ```
+
+```sh
+nix run home-manager/master -- switch --impure --flake ~/.config/nix#"$USER"
+```

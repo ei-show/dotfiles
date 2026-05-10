@@ -5,7 +5,6 @@
 
   home.packages = with pkgs; [
     git
-    ghq
     fzf
     ripgrep
     fd
@@ -23,7 +22,7 @@
   programs.home-manager.enable = true;
 
   programs.zsh = {
-    enable = true;
+    enable = false;
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
