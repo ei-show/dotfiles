@@ -16,6 +16,7 @@
     starship
     lazygit
     neovim
+    nodejs
     tmux
   ];
 
