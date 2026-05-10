@@ -3,10 +3,29 @@ set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-ln -sfn "$DOTFILES_DIR/wezterm" "$HOME/.config/wezterm"
-ln -sfn "$DOTFILES_DIR/sheldon" "$HOME/.config/sheldon"
+backup_if_exists() {
+  local target="$1"
 
-ln -sfn "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
-ln -sfn "$DOTFILES_DIR/starship/starship.toml" "$HOME/.config/starship.toml"
+  if [ -e "$target" ] && [ ! -L "$target" ]; then
+    mv "$target" "${target}.backup.$(date +%Y%m%d%H%M%S)"
+    echo "backup: $target"
+  fi
+}
+
+link_file() {
+  local src="$1"
+  local dest="$2"
+
+  backup_if_exists "$dest"
+  ln -sfn "$src" "$dest"
+  echo "linked: $dest -> $src"
+}
+
+link_file "$DOTFILES_DIR/wezterm" "$HOME/.config/wezterm"
+link_file "$DOTFILES_DIR/sheldon" "$HOME/.config/sheldon"
+link_file "$DOTFILES_DIR/zsh" "$HOME/.config/zsh"
+
+link_file "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
+link_file "$DOTFILES_DIR/starship.toml" "$HOME/.config/starship.toml"
 
 echo "dotfiles linked."

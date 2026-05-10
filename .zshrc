@@ -4,18 +4,6 @@ export PATH="/Users/bl32845/.rd/bin:$PATH"
 
 . "$HOME/.local/bin/env"
 
-# Aliases
-alias ls="ls -p -G"
-alias la="ls -A"
-alias ll="ls -l"
-alias lla="ll -A"
-alias g=git
-alias k=kubectl
-alias kc=kubecolor
-alias kx=kubectx
-alias t=terraform
-command -v nvim &>/dev/null && alias vim=nvim
-
 # terraform
 export TF_CLI_ARGS_plan="-parallelism=50"
 export TF_CLI_ARGS_apply="-parallelism=50"
@@ -32,3 +20,13 @@ autoload -Uz compinit
 compinit
 
 eval "$(starship init zsh)"
+
+# zsh/*.zsh を読み込む
+for file in "$HOME/.config/zsh/"*.zsh; do
+  [ -r "$file" ] && source "$file"
+done
+
+# zsh/functions/*.zsh を読み込む
+for file in "$HOME/.config/zsh/functions/"*.zsh; do
+  [ -r "$file" ] && source "$file"
+done

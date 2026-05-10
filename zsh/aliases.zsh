@@ -1,0 +1,10 @@
+alias ls="ls -p -G"
+alias la="ls -A"
+alias ll="ls -l"
+alias lla="ll -A"
+alias g=git
+alias k=kubectl
+alias kc=kubecolor
+alias kx=kubectx
+alias t=terraform
+command -v nvim &>/dev/null && alias vim=nvim
