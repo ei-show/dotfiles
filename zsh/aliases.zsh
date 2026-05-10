@@ -7,4 +7,5 @@ alias k=kubectl
 alias kc=kubecolor
 alias kx=kubectx
 alias t=terraform
-command -v nvim &>/dev/null && alias vim=nvim
+alias vim=nvim
+alias vi=nvim
