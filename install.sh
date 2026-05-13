@@ -29,5 +29,7 @@ link_file "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
 
 link_file "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 link_file "$DOTFILES_DIR/starship.toml" "$HOME/.config/starship.toml"
+link_file "$DOTFILES_DIR/iterm2/com.googlecode.iterm2.plist" "$HOME/.config/iterm2/com.googlecode.iterm2.plist"
 
 echo "dotfiles linked."
+

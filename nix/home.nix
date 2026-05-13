@@ -18,6 +18,7 @@
     neovim
     nodejs
     tmux
+    iterm2
   ];
 
   programs.home-manager.enable = true;
@@ -42,5 +43,10 @@
   programs.zoxide = {
     enable = true;
     enableZshIntegration = true;
+  };
+
+  targets.darwin.defaults."com.googlecode.iterm2" = {
+    PrefsCustomFolder = "${config.home.homeDirectory}/.config/iterm2";
+    LoadPrefsFromCustomFolder = true;
   };
 }
