@@ -19,6 +19,7 @@
     nodejs
     tmux
     iterm2
+    gh
   ];
 
   programs.home-manager.enable = true;

@@ -23,5 +23,5 @@ chmod +x install.sh
 ```
 
 ```sh
-nix run home-manager/master -- switch --impure --flake ~/.config/nix#"$USER"
+nix run ~/.config/nix#home-manager -- switch --impure --flake ~/.config/nix#"$USER"
 ```

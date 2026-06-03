@@ -17,6 +17,11 @@
       homeDirectory = builtins.getEnv "HOME";
     in
     {
+      apps.${system}.home-manager = {
+        type = "app";
+        program = "${home-manager.packages.${system}.home-manager}/bin/home-manager";
+      };
+
       homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
           inherit system;
