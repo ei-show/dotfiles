@@ -31,5 +31,8 @@ link_file "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 link_file "$DOTFILES_DIR/starship.toml" "$HOME/.config/starship.toml"
 link_file "$DOTFILES_DIR/iterm2/com.googlecode.iterm2.plist" "$HOME/.config/iterm2/com.googlecode.iterm2.plist"
 
-echo "dotfiles linked."
+mkdir -p "$HOME/.codex/docs"
+link_file "$DOTFILES_DIR/codex/AGENTS.md" "$HOME/.codex/AGENTS.md"
+link_file "$DOTFILES_DIR/codex/docs" "$HOME/.codex/docs"
 
+echo "dotfiles linked."
