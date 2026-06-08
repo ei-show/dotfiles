@@ -32,11 +32,37 @@ def default_target_date() -> date:
 前提や副作用の説明が必要な場合は、本文を追加します。
 
 ```python
-def publish(self, output_path: Path, target_date: date) -> str:
-    """生成済みファイルを外部ストレージへ保存する。
+def func(arg1, arg2):
+    """概要
 
-    呼び出し前に出力先の設定が検証済みであることを前提とする。
+    詳細説明
+
+    Args:
+        引数(arg1)の名前 (引数(arg1)の型): 引数(arg1)の説明
+        引数(arg2)の名前 (:obj:`引数(arg2)の型`, optional): 引数(arg2)の説明
+
+    Returns:
+        戻り値の型: 戻り値の説明
+
+    Raises:
+        例外の名前: 例外の説明
+
+    Yields:
+        戻り値の型: 戻り値についての説明
+
+    Examples:
+
+        関数の使い方
+
+        >>> func(5, 6)
+        11
+
+    Note:
+        注意事項や注釈など
+
     """
+   value = arg1 + arg2
+   return value
 ```
 
 ### 型定義
