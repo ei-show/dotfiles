@@ -1,0 +1,14 @@
+auto_sync = false
+update_check = false
+search_mode = "daemon-fuzzy"
+filter_mode = "global"
+style = "compact"
+show_preview = true
+enter_accept = false
+
+[daemon]
+enabled = true
+autostart = true
+
+[search]
+filters = ["global", "workspace", "directory", "host", "session"]

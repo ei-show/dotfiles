@@ -26,6 +26,7 @@ link_file "$DOTFILES_DIR/sheldon" "$HOME/.config/sheldon"
 link_file "$DOTFILES_DIR/zsh" "$HOME/.config/zsh"
 link_file "$DOTFILES_DIR/nix" "$HOME/.config/nix"
 link_file "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
+link_file "$DOTFILES_DIR/atuin" "$HOME/.config/atuin"
 
 link_file "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 link_file "$DOTFILES_DIR/starship.toml" "$HOME/.config/starship.toml"

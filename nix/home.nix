@@ -14,6 +14,7 @@
     yq
     zoxide
     starship
+    atuin
     lazygit
     neovim
     nodejs
