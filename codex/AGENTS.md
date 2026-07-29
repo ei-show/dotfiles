@@ -50,6 +50,25 @@ Terraform コマンドを利用するときは、`terraform apply` を絶対に�
 - 挙動を変更した場合は、対象を絞った回帰テストを追加または更新する。
 - 実行できなかった検証がある場合は、理由と残るリスクを明記する。
 
+## Claude Code 認証
+
+Claude Code CLI を利用する前に、`CLAUDE_CODE_OAUTH_TOKEN` が未設定で、
+`~/.codex/.env` が読み取り可能な場合は、シェルトレースを無効化してから同ファイルを
+読み込んで環境変数をエクスポートしてください。
+
+```sh
+set +x
+if [ -z "${CLAUDE_CODE_OAUTH_TOKEN:-}" ] && [ -r "$HOME/.codex/.env" ]; then
+  set -a
+  . "$HOME/.codex/.env"
+  set +a
+fi
+```
+
+トークンの値を表示、ログ出力、別ファイルへ保存、またはコミットしてはいけません。
+読み込み後もトークンが未設定の場合は、対話的なログインや再発行を試みず、その旨を
+報告してください。
+
 ## Claudeによる成果物レビュー
 
 - 要件定義、仕様書、設計書を確定する前、Issueを作成または更新する前、実装のtest完了後かつcommitまたはMR作成前に、`$review-with-claude`を一度使用する。
