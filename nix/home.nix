@@ -21,6 +21,7 @@
     tmux
     iterm2
     gh
+    sheldon
   ];
 
   programs.home-manager.enable = true;

@@ -9,9 +9,9 @@ dotfiles
 
 ### Required
 
-- Nix
-- Homebrew
-- ghq
+- [Nix](https://nixos.org/download/)
+- [Homebrew](https://brew.sh/)
+- [ghq](https://github.com/x-motemen/ghq)
 
 ### Execute script
 
