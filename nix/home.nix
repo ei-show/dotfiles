@@ -17,11 +17,11 @@
     atuin
     lazygit
     neovim
-    nodejs
     tmux
     iterm2
     gh
     sheldon
+    pnpm
   ];
 
   programs.home-manager.enable = true;
