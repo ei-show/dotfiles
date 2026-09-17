@@ -22,6 +22,7 @@
     gh
     sheldon
     pnpm
+    colordiff
   ];
 
   programs.home-manager.enable = true;
