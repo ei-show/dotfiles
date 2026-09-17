@@ -23,6 +23,7 @@
     sheldon
     pnpm
     colordiff
+    kubernetes-helm
   ];
 
   programs.home-manager.enable = true;
