@@ -52,8 +52,11 @@ Terraform コマンドを利用するときは、`terraform apply` を絶対に�
 
 ## ドキュメント作成・更新
 
-README、TechDocsなどのMarkdown文書を作成・更新する前に、リポジトリルートの `docs/document.md` を読み、その規約に従う。
-作成・更新後は、同文書の確認項目で変更箇所を点検する。
+Markdown文書を作成・更新する前に、`~/.codex/docs/document.md` を読む。
+対象リポジトリに `docs/document.md` がある場合は、それも読み、固有規約を優先する。
+
+本文は1文1行とし、任意の文字数で途中改行しない。
+完了前に変更したMarkdownソースを再読し、規約への適合を確認する。
 
 ## 成果物レビュー
 
