@@ -8,6 +8,14 @@ if [ -f "$HOME/.local/bin/env" ]; then
   . "$HOME/.local/bin/env"
 fi
 
+# ローカルの環境変数を読み込む
+() {
+  if [[ -r "$HOME/.env" ]]; then
+    setopt localoptions allexport
+    source "$HOME/.env"
+  fi
+}
+
 # zsh/*.zsh を読み込む
 for file in "$HOME/.config/zsh/"*.zsh; do
   [ -r "$file" ] && source "$file"
