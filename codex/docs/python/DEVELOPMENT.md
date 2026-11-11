@@ -175,7 +175,8 @@ Python プロジェクトでは、次を標準候補とします。
 
 - 依存関係と仮想環境: `uv`
 - lint と format: `ruff`
-- 型チェック: `mypy` strict mode
+- 型チェック: `ty` strict mode
+- コマンドライン補助: `Typer`
 - テスト: `pytest`
 - タスク実行: `poethepoet`
 - commit 時の補助チェック: `pre-commit`
