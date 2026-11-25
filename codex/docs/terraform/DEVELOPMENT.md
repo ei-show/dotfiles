@@ -24,6 +24,8 @@
 
 - Workflows から Google Cloud の API を呼ぶ場合は、必要な操作と引数に対応する組み込みコネクタを `call` で使う。
 - 外部 API やコネクタが対応していない操作には、Workflows の HTTP 関数を使う。
+- Workflows のサービスエージェントには、プロジェクト番号を使って `service-PROJECT_NUMBER@gcp-sa-workflows.iam.gserviceaccount.com` を IAM に直接指定する。
+- Workflows の初回デプロイでサービスエージェントが自動作成される順序を考慮し、この用途でベータ版の `google_project_service_identity` を追加しない。
 - サービスアカウント自体の IAM は、直接付与するポリシー全体を単一の Terraform 構成が管理できる場合に `google_service_account_iam_policy` を使う。
 - 既存のサービスアカウントに導入するときは、維持する直接付与をすべて定義し、同じポリシーを変更する別の state や運用手順がないことを確認する。
 - サービスアカウントが他のリソースを利用するための権限は、そのリソースまたは該当プロジェクトの IAM ポリシーに設定する。
